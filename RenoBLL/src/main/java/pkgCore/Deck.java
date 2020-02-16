@@ -66,9 +66,13 @@ public class Deck {
 	 */
 	public Card Draw() throws DeckException {
 		//Implement this method.  Shouldn't return null, return the right value
-		Card temp = this.cardsInDeck.get(0);
+		try {
+			Card temp = this.cardsInDeck.get(0);
 		this.cardsInDeck.remove(0);
 		return temp;
+		} catch (Exception e) {
+			throw new DeckException(null);
+		}
 	}
 
 	/**
