@@ -45,7 +45,16 @@ public class Deck {
 	 */
 	public Deck(int iNbrOfDecks) {
 		//TODO - Implement the constructor
-		
+		for(int i = 0; i<iNbrOfDecks; i++) {
+			for(eRank tempRank : eRank.values()) {
+				for(eSuit tempSuit : eSuit.values()) {
+					if(!tempRank.equals(eRank.JOKER) && !tempSuit.equals(eSuit.JOKER)) {
+						Card temp = new Card(tempSuit,tempRank);
+						this.cardsInDeck.add(temp);
+					}
+				}
+			}
+		}
 	}
 
 	/**
@@ -56,9 +65,10 @@ public class Deck {
 	 * @throws DeckException
 	 */
 	public Card Draw() throws DeckException {
-		//FIXME - Implement this method.  Shouldn't return null, return the right value
-		return null;
-
+		//Implement this method.  Shouldn't return null, return the right value
+		Card temp = this.cardsInDeck.get(0);
+		this.cardsInDeck.remove(0);
+		return temp;
 	}
 
 	/**
@@ -70,8 +80,8 @@ public class Deck {
 	 * getiDeckCount - Return the number of cards remaining in the deck.
 	 */
 	public int getiDeckCount() {
-		//FIXME - Implement this method.  Shouldn't return 0, return the right value
-		return 0;
+		//houldn't return 0, return the right value
+		return this.cardsInDeck.size();
 	}
 
  
@@ -85,8 +95,8 @@ public class Deck {
 	 * @return - the cards in the deck.
 	 */
 	private ArrayList<Card> getCardsInDeck() {
-		//FIXME - Implement this method.  Shouldn't return 0, return the right value
-		return null;
+		//Implement this method.  Shouldn't return 0, return the right value
+		return this.cardsInDeck;
 	}
  
 	
