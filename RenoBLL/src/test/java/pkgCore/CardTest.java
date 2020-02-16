@@ -9,9 +9,10 @@ import org.junit.jupiter.api.Test;
 
 import pkgEnum.eRank;
 import pkgEnum.eSuit;
+import pkgShapes.Rectangle;
 
 public class CardTest {
- 
+	
 	/**
 	 * @author BRG
 	 * @version Lab #1
@@ -20,14 +21,14 @@ public class CardTest {
 	 *        Card_Create_Test - Test to make sure constructor works, getter/setter works
 	 */
 	
-//	@Test
-//	public void Card_Create_Test() {
-//		Card c = new Card(eSuit.CLUBS, eRank.EIGHT);
-//		assertNotNull(c);
-//		assertEquals(eSuit.CLUBS, c.geteSuit());
-//		assertEquals(eRank.EIGHT, c.geteRank());
-//		assertFalse(c.isWild());
-//	}
+	@Test
+	public void Card_Create_Test() {
+		Card c = new Card(eSuit.CLUBS, eRank.EIGHT);
+		assertNotNull(c);
+		assertEquals(eSuit.CLUBS, c.geteSuit());
+		assertEquals(eRank.EIGHT, c.geteRank());
+		assertFalse(c.isWild());
+	}
 
 	/**
 	 * @author BRG
@@ -36,16 +37,16 @@ public class CardTest {
 	 * 
 	 *        Card_Equal_Test - test to make sure the equals method works
 	 */
-//	@Test
-//	public void Card_Equal_Test() {
-//		Card c1 = new Card(eSuit.HEARTS, eRank.TWO);
-//		Card c2 = new Card(eSuit.HEARTS, eRank.TWO);
-//
-//		assertTrue(c1.equals(c2));
-//
-//		Card c3 = new Card(eSuit.HEARTS, eRank.THREE);
-//		assertFalse(c1.equals(c3));
-//	}
+/*	@Test
+	public void Card_Equal_Test() {
+		Card c1 = new Card(eSuit.HEARTS, eRank.TWO);
+		Card c2 = new Card(eSuit.HEARTS, eRank.TWO);
+
+		assertTrue(c1.equals(c2));
+
+		Card c3 = new Card(eSuit.HEARTS, eRank.THREE);
+		assertFalse(c1.equals(c3));
+	}*/
 
 	/**
 	 * @author BRG
